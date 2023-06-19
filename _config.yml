@@ -13,7 +13,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 audio_path: "/audio/"
 episode_hero_path: "/assets/img/stops/"
-url: "http://www.example.com" # the base hostname & protocol for your site
+url: "https://ta-intern.github.io/t-qm-audioguide/" # the base hostname & protocol for your site
 logo: "/assets/img/logo/audio-guide.png"
 twitter_username: acmilabs
 github_username:  acmilabs

@@ -28,18 +28,17 @@ layout: master_episode
     </div>
   {% endif %}
 
- 
-  {% if page.video_required !=null %}
-    <!-- Video format -->
-    <div>
-    <video controls>
-      <div>
-      <source src="{{ site.baseurl }}{{ page.video_url }}" type="video/mp4">
-      Your browser does not support the video tag.
-    </div>
-    </video>
+
+  {% if page.video_page %}
+  <div class="slick-container post-hero-image-container" >    
+  <video width="100%" controls>
+    <source src="{{ site.baseurl }}/audio/video1.mp4" type="video/mp4">
+       Your browser does not support the video tag.
+  </video>
+  <b style="font-size: 15px;padding:10px;margin:2rem">  Video courtesy of General Collection-Doha and the Lusail Museum Collection-Doha</b>
   </div>
-  {% endif %}
+{% endif %}
+
 
 
   <div class="post-content">
@@ -48,9 +47,3 @@ layout: master_episode
 
 </article>
 
-  
-  
-  
-<!--hero_images:
- - path: T1.jpg
-   alt_text: Second example photo for stop 3-->

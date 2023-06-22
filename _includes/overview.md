@@ -1,1 +1,1 @@
-Select an audio guide stop to begin.
+SELECT AN AUDIO GUIDE TO BEGIN WITH

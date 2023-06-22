@@ -27,13 +27,19 @@ layout: master_episode
     </div>
   {% endif %}
 
-  {% if page.video_required %}
+ 
+  {% if page.video_required !=null %}
     <!-- Video format -->
+    <div>
     <video controls>
+      <div>
       <source src="{{ site.baseurl }}{{ page.video_url }}" type="video/mp4">
       Your browser does not support the video tag.
+    </div>
     </video>
+  </div>
   {% endif %}
+
 
   <div class="post-content">
     {{ content }}

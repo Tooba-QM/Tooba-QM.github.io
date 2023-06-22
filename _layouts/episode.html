@@ -26,6 +26,15 @@ layout: master_episode
       </div>
     </div>
   {% endif %}
+
+  {% if page.video_required %}
+    <!-- Video format -->
+    <video controls>
+      <source src="{{ site.baseurl }}{{ page.video_url }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  {% endif %}
+
   <div class="post-content">
     {{ content }}
   </div>
@@ -35,3 +44,6 @@ layout: master_episode
   
   
   
+<!--hero_images:
+ - path: T1.jpg
+   alt_text: Second example photo for stop 3-->

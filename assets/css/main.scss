@@ -72,6 +72,27 @@ $height-600:       600px;
 }
 
 
+label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  select {
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .artist-info {
+    display: none;
+    margin-top: 20px;
+  }
+  
+  #artistImage {
+    max-width: 300px;
+  }
+
+  
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "fonts",

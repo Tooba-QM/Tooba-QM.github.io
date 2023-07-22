@@ -8,13 +8,39 @@
     {% include header.html %}
 
     <div class="page-content main-page">
+     <br>
       <div class="wrapper">
         {{ content }}
+      </div>
+      <br>
+      <br>
+
+      <!--API TO INSERT : DROPDOWN -->
+      <div class="wrapper">
+       
+        <h3>Here are the artists in LM museum:</h3>
+        <label for="artistSelect">Select an artist:</label>
+        <select id="artistSelect">
+          <!-- Dropdown options will be populated dynamically -->
+        </select>
+      
+        <div class="artist-info">
+          <h2 id="artistName"></h2>
+          <img id="artistImage" src="" alt="Artist Image">
+          <p id="artistDescription"></p>
+        </div>
+
+
+
       </div>
     </div>
 
     {% include footer.html %}
 
+
+
+
+    <script src="script.js"></script>
   </body>
 
 </html>

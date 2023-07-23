@@ -3,6 +3,8 @@
 
   {% include head.html %}
 
+  <head><script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
   <body>
     {% include tagmanager.html %}
     {% include header.html %}
@@ -25,10 +27,17 @@
         </select>
       
         <div class="artist-info">
-          <h2 id="artistName"></h2>
-          <img id="artistImage" src="" alt="Artist Image">
-          <p id="artistDescription"></p>
-        </div>
+          <div class="artist-header">
+              <h2 id="artistName"></h2>
+              <h4 id="artistBirthDate"></h4>
+          </div>
+          <div class="artist-details">
+              
+              <img id="artistImage" src="" alt="Artist Image">
+              <br>
+              <p id="artistDescription"></p>
+          </div>
+      </div>
 
 
 
@@ -40,7 +49,7 @@
 
 
 
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 
 </html>

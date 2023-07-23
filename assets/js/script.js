@@ -3,12 +3,13 @@ const artistSelect = document.getElementById('artistSelect');
 const artistNameElement = document.getElementById('artistName');
 const artistImageElement = document.getElementById('artistImage');
 const artistDescriptionElement = document.getElementById('artistDescription');
+const artistBirthDateElement = document.getElementById('artistBirthDate');
 const artistInfoContainer = document.querySelector('.artist-info');
 
 // Replace 'YOUR_AIRTABLE_API_KEY' and 'YOUR_AIRTABLE_BASE_ID' with your actual Airtable API key and base ID.
-const AIRTABLE_API_KEY = 'YOUR_AIRTABLE_API_KEY';
-const BASE_ID = 'YOUR_AIRTABLE_BASE_ID';
-const TABLE_NAME = 'YOUR_TABLE_NAME';
+const AIRTABLE_API_KEY = 'patKypMilGv2SPk3D.0b6dbc88a34de777a252c631047c33bc055814b9afaaba44404db2de2ac6dab8';
+const BASE_ID = 'apposd1OZKLqWL18c';
+const TABLE_NAME = 'Artist';
 
 // Fetch artist data from Airtable using the Airtable API
 function fetchArtistData() {
@@ -25,7 +26,7 @@ function fetchArtistData() {
     data.forEach(artist => {
       const option = document.createElement('option');
       option.value = artist.id;
-      option.textContent = artist.fields['Artist Name'];
+      option.textContent = artist.fields['Name'];
       artistSelect.appendChild(option);
     });
   })
@@ -48,9 +49,10 @@ artistSelect.addEventListener('change', (event) => {
   .then(response => {
     const artist = response.data.fields;
     // Display the selected artist's information
-    artistNameElement.textContent = artist['Artist Name'];
-    artistImageElement.src = artist['Image'][0].url;
-    artistDescriptionElement.textContent = artist['Short Paragraph'];
+    artistNameElement.textContent = artist['Name'];
+    artistImageElement.src = artist['Work'][0].url;
+    artistBirthDateElement.textContent = artist['Born'];
+    artistDescriptionElement.textContent = artist['Artist Info'];
 
     // Show the artist info container
     artistInfoContainer.style.display = 'block';

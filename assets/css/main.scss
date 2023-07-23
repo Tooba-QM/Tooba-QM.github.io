@@ -71,52 +71,108 @@ $height-600:       600px;
     }
 }
 
+
+
+/* Custom styling for the artist-info div */
 .artist-info {
-  border: 2px solid #ccc;
+  display: flex;
+  border: 2px solid #dcd8ce;
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 20px;
+  background-color: #dcd8ce;
 }
 
-.artist-header {
+.artist-details {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  flex: 1;
+}
+
+.artist-text {
+ 
   justify-content: space-between;
+  align-items: flex-start;
   margin-bottom: 10px;
 }
 
-.artist-header h2 {
-  font-size: 24px;
+.artist-text h2 {
+  font-size: 28px;
   font-weight: bold;
   margin: 0;
 }
 
-.artist-header h4 {
-  font-size: 14px;
+.artist-text h4 {
+  font-size: 16px;
   color: black;
   margin: 0;
 }
 
-.artist-details img {
-  max-width: 100%;
-  border-radius: 8px;
+/* Custom styling for the image and caption */
+.artist-details figure {
+  align-self: flex-end;
+  margin-left: 20px;
+  width: 100%; /* Set the width of the image to 100% of its container */
   margin-bottom: 10px;
+  overflow: hidden; /* Hide any overflowing parts of the image */
 }
 
-.artist-details p {
+.artist-details img {
+  width: 100%;
+  height: 100%; /* Set the height of the image to 100% of its container */
+  border-radius: 8px;
+  object-fit: cover; /* Ensure the image fills the container while maintaining aspect ratio */
+}
+
+.artist-details figcaption {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+
+
+
+
+.artist-description {
+  flex: 1;
+  margin-top: 20px; /* Add margin to separate from artist-details */
+}
+
+.artist-description p {
   line-height: 1.6;
+  padding: 3px;
 }
 
-label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  select {
-    width: 200px;
-    padding: 5px;
-    margin-bottom: 20px;
-  }
+/* Your existing CSS styles here */
+
+.artist-birth {
+  display: flex;
+  align-items: center;
+}
+
+.artist-birth span {
+  font-size: 16px;
+  color: #666;
+  margin-right: 5px;
+}
+
+.artist-birth h4 {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}
+
+.artist-info {
+  display: none;
+  margin-top: 20px;
+}
+
+
+
+
+
+  /* Your existing CSS styles here 
   
   .artist-info {
     display: none;
@@ -126,6 +182,38 @@ label {
   #artistImage {
     max-width: 300px;
   }
+  
+  */
+
+/* Custom styling for the label and select elements */
+label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px;
+}
+
+select {
+  font-size: 16px;
+  padding: 8px;
+  border: 2px solid #dcd8ce;
+  border-radius: 8px;
+  background-color: #dcd8ce;
+  color: black;
+  outline: none;
+ 
+}
+
+
+select::-ms-expand {
+  display: none; /* Hide the default arrow on Internet Explorer */
+}
+
+select::after {
+  content: "\25BC"; /* Unicode for down arrow */
+  font-size: 14px;
+  padding: 0 5px;
+}
 
   
 // Import partials from `sass_dir` (defaults to `_sass`)

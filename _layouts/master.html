@@ -25,20 +25,30 @@
         <select id="artistSelect">
           <!-- Dropdown options will be populated dynamically -->
         </select>
-      
+
         <div class="artist-info">
-          <div class="artist-header">
-              <h2 id="artistName"></h2>
-              <h4 id="artistBirthDate"></h4>
-          </div>
           <div class="artist-details">
+              <div class="artist-text">
+                  <h2 id="artistName"></h2>
+                  <div class="artist-birth">
+                    <span>Birthdate:</span>
+                    <h4 id="artistBirthDate"></h4>
+                </div>
+                  <br>
+              </div>
               
-              <img id="artistImage" src="" alt="Artist Image">
-              <br>
+              <figure>
+                  <img id="artistImage" src="" alt="Artist Image">
+                  <br>
+                  <figcaption id="imageCaption">Caption goes here</figcaption>
+              </figure>
+          </div>
+          <div class="artist-description">
               <p id="artistDescription"></p>
           </div>
       </div>
-
+  
+      
 
 
       </div>
